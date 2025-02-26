@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import AgoraRTC from "agora-rtc-sdk-ng";
 
-const APP_ID = "9d0a5199c60d4848bc01f354d7ac7917";
-
-const TOKEN = '007eJxTYLi82trg+HXd+WdYGhgyQngn7V7u6nM87p3J5v0aF9P/r3yuwGCZYpBoamhpmWxmkGJiYWKRlGxgmGZsapJinphsbmloPuvjvvSGQEaGiR4vGRkZIBDE52Uoy0xJzddNTszJycxLZ2AAANk3JIo=';
-
-const CHANNEL = "video-calling";
+const APP_ID = import.meta.env.VITE_AGORA_APP_ID;
+const TOKEN = import.meta.env.VITE_AGORA_TOKEN;
+const CHANNEL = import.meta.env.VITE_AGORA_CHANNEL;
 
 const client = AgoraRTC.createClient({ mode: "rtc", codec: "vp8" });
 
